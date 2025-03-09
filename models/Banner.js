@@ -1,8 +1,7 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'); // Add this line
 
 const bannerSchema = new mongoose.Schema({
-  image: { type: String, required: true }, // Changed from 'text' to 'image'
-  bgColor: { type: String, default: '#ef4f5f' },
+  image: { type: String, required: true },
   createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
 }, { timestamps: true });
 
